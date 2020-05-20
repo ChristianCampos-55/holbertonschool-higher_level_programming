@@ -5,7 +5,7 @@ class Square:
 
     """ definition of size method, with excepted edge cases """
 
-    def __init__(self, size):
+    def __init__(self, size=0):
         if type(size) != int:
             raise TypeError('size must be an integer')
         elif size < 0:
@@ -23,7 +23,7 @@ class Square:
 
     """ set setter (yeah, I know) """
     @size.setter
-    def __init__(self, size):
+    def __init__(self, value):
         if type(size) != int:
             raise TypeError('size must be an integer')
         elif size < 0:
