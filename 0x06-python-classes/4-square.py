@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """ Class Square """
 
+
 class Square:
     """ definition of size method, with excepted edge cases """
     def __init__(self, size=0):
