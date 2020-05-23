@@ -1,0 +1,38 @@
+Test doc for add_integer(), from 0-add_integer.py
+=================================================
+
+using ``add_integer``
+---------------------
+
+Import ``add_integer`` from ``0-add_integer.py``
+
+    >>> add_integer = __import__('0-add_integer').add_integer
+
+Now use it:
+
+    Normal check:
+
+    >>> add_integer(5, 10)
+    15
+
+    >>> add_integer(20, 20)
+    40
+
+---------------------------
+
+    Only one number passed:
+
+    >>> add_integer(5)
+    103
+
+---------------------------
+
+    Floats passed (1 and 2):
+
+    >>> add_integer(5.0)
+    103
+
+    >>> add_integer(5.0, 10.0)
+    15
+
+--------------------------------
