@@ -1,0 +1,117 @@
+Test doc for matrix_divided(), from 2-matrix_divided.py
+=======================================================
+
+using ``matrix_divided``
+------------------------
+
+Import ``matrix_divided`` from ``2-matrix_divided.py``
+
+    >>> matrix_divided = __import__('2-matrix_divided').matrix_divided
+
+Now use it:
+
+    Normal check:
+
+    >>> matrix = [[1,2,3], [4,5,6]]
+    >>> matrix_divided(matrix, 2)
+    [[0.5, 1.0, 1.5], [2.0, 2.5, 3.0]]
+
+--------------------------------------
+
+    Bigger list check:
+
+    >>> matrix = [[1,2,3], [4,5,6], [7, 8, 9]]
+    >>> matrix_divided(matrix, 2)
+    [[0.5, 1.0, 1.5], [2.0, 2.5, 3.0], [3.5, 4.0, 4.5]]
+
+-------------------------------------------------------
+
+    Division by 0 check:
+
+    >>> matrix = [[1,2,3], [4,5,6], [7, 8, 9]]
+    >>> matrix_divided(matrix, 0)
+    Traceback (most recent call last):
+    ZeroDivisionError: division by zero
+
+-------------------------------------------------------
+
+    Division by negative check:
+
+    >>> matrix = [[1, 2], [4,5]]
+    >>> matrix_divided(matrix, -2)
+    [[-0.5, -1.0], [-2.0, -2.5]]
+
+-------------------------------------------------------
+
+
+    Matrix of different size check:
+
+    >>> matrix = [[1,2,3], [4,5]]
+    >>> matrix_divided(matrix, 2)
+    Traceback (most recent call last):
+    TypeError: Each row of the matrix must have the same size
+
+-------------------------------------------------------
+
+    Int or float (matrix) check:
+
+    >>> matrix = 'I f it up'
+    >>> matrix_divided(matrix, 0)
+    Traceback (most recent call last):
+    TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+-------------------------------------------------------
+
+    Int or float (div) check:
+
+    >>> matrix = [[1,2,3], [4,5,6], [7, 8, 9]]
+    >>> matrix_divided(matrix, 'f')
+    Traceback (most recent call last):
+    TypeError: div must be a number
+
+-------------------------------------------------------
+
+    Just one list check:
+
+    >>> matrix = [[1,2,3]]
+    >>> matrix_divided(matrix, 2)
+    Traceback (most recent call last):
+    IndexError: not enough lists to divide
+
+-------------------------------------------------------
+
+    float overflow (div) check:
+
+    >>> matrix = [[1,2,3], [4, 5, 6]]
+    >>> matrix_divided(matrix, float('inf'))
+    Traceback (most recent call last):
+    OverflowError: cannot operate on infinite number
+
+-------------------------------------------------------
+
+    float overflow (matrix) check:
+
+    >>> matrix = [[1, float('inf')], [3, 4]]
+    >>> matrix_divided(matrix, 2)
+    Traceback (most recent call last):
+    OverflowError: cannot operate on infinite number
+
+-------------------------------------------------------
+
+    float nan (matrix) check:
+
+    >>> matrix = [[1, float('nan')], [3, 4]]
+    >>> matrix_divided(matrix, 2)
+    Traceback (most recent call last):
+    ValueError: cannot operate on NaN number
+
+-------------------------------------------------------
+
+    float nan (matrix) check:
+
+    >>> matrix = [[1, 2], [3, 4]]
+    >>> matrix_divided(matrix, float('nan'))
+    Traceback (most recent call last):
+    ValueError: cannot operate on NaN number
+
+-------------------------------------------------------
