@@ -14,9 +14,6 @@ def add_integer(a, b=98):
     if type(b) is float:
         b = int(b)
 
-    if len(a) > 32 or len(b) > 32:
-        raise OverflowError('argument exceded limits of current runtime')
-
     if type(a) is not int:
         raise TypeError('a must be an integer')
     if type(b) is not int:
