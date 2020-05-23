@@ -50,3 +50,14 @@ Now use it:
    ValueError: cannot convert float to int
 
 --------------------------------------------------------
+
+    Check type:
+    >>> add_integer("2")
+    Traceback (most recent call last):
+    TypeError: a must be an integer
+
+    >>> add_integer(5, "2")
+    Traceback (most recent call last):
+    TypeError: b must be an integer
+
+---------------------------------------
