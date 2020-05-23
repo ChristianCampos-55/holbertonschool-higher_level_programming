@@ -36,3 +36,17 @@ Now use it:
     15
 
 --------------------------------
+
+    Float overflow:
+    >>> add_integer(float('inf'))
+    Traceback (most recent call last):
+    OverflowError: argument exceded limits of current runtime
+
+--------------------------------------------------------
+
+   Nan convertion error:
+   >>> add_integer(float('NaN'))
+   Traceback (most recent call last):
+   ValueError: cannot convert float to int
+
+--------------------------------------------------------

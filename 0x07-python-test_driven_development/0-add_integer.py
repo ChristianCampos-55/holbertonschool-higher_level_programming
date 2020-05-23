@@ -1,18 +1,21 @@
 #!/usr/bin/python3
-""" A function that adds 2 numbers """
+""" Module that hosts add_integer function. """
 
 
 def add_integer(a, b=98):
     """
-    The function returns the sum of both numbers,
+    The function returns the sum of two numbers (a, b)
     which are supossed to be either integers or floats,
-    (or casted).
+    (both are casted into integers in case they are floats).
     """
 
     if type(a) is float:
         a = int(a)
     if type(b) is float:
         b = int(b)
+
+    if len(a) > 32 or len(b) > 32:
+        raise OverflowError('argument exceded limits of current runtime')
 
     if type(a) is not int:
         raise TypeError('a must be an integer')
