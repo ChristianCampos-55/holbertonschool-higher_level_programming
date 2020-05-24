@@ -1,0 +1,47 @@
+Test doc for say_my_name(), from 3-say_my_name.py
+=======================================================
+
+using ``say_my_name``
+------------------------
+
+Import ``say_my_name`` from ``3-say_my_name.py``
+
+    >>> say_my_name = __import__('3-say_my_name').say_my_name
+
+Now use it:
+
+    Normal check:
+
+    >>> say_my_name("David", "Fields")
+    My name is David Fields
+
+--------------------------------------
+
+    Just one name
+
+    >>> say_my_name("David")
+    My name is David 
+
+-------------------------------------------------------
+
+    FN another value:
+
+    >>> say_my_name(12, "Fields")
+    Traceback (most recent call last):
+    TypeError: first_name must be a string
+
+-------------------------------------------------------
+
+    LN another value:
+
+    >>> say_my_name("David", 12)
+    Traceback (most recent call last):
+    TypeError: last_name must be a string
+
+-------------------------------------------------------
+
+    No values:
+
+    >>> say_my_name()
+    Traceback (most recent call last):
+    TypeError: The function needs at least one valid value
