@@ -1,0 +1,33 @@
+Tests for text_indentation function from 5-text_indentation.py
+==============================================================
+
+import function:
+       >>> text_indentation = __import__('5-text_indentation').text_indentation
+
+Tests for function:
+
+    Normal test:
+
+    >>> text_indentation('This is kinda.anoying')
+    This is kinda.
+    <BLANKLINE>
+    anoying
+
+___________________________________________________
+
+    Test is not string:
+
+    >>> text_indentation(12)
+    Traceback (most recent call last):
+    TypeError: text must be a string
+
+__________________________________________
+
+    Normal test with space:
+
+    >>> text_indentation('This is kinda. anoying')
+    This is kinda.
+    <BLANKLINE>
+    anoying
+
+_________________________________________________
