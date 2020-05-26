@@ -18,10 +18,9 @@ class Rectangle:
         return (self.__width * 2) + (self.__height * 2)
 
     def __str__(self):
-        if self.__width == 0 or self.height == 0:
-            return ''
-
         rec = ''
+        if self.__width == 0 or self.height == 0:
+            return rec
         for i in range(self.__height):
             for j in range(self.__width):
                 rec += '#'
