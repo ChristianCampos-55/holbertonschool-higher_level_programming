@@ -13,9 +13,20 @@ class Rectangle:
         return self.__width * self.__height
 
     def perimeter(self):
-        if self.__height == 0 or self.__width == 0:
+        if self.__width == 0 or self.height == 0:
             return 0
         return (self.__width * 2) + (self.__height * 2)
+
+    def __str__(self):
+        if self.__width == 0 or self.height == 0:
+            return ''
+
+        rec = ''
+        for i in range(self.__height):
+            for j in range(self.__width):
+                rec += '#'
+            rec += '\n'
+        return rec
 
     @property
     def width(self):
