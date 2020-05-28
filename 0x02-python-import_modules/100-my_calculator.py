@@ -5,9 +5,9 @@ if __name__ == '__main__':
     if len(argv) is not 4:
         print('Usage: ./100-my_calculator.py <a> <operator> <b>')
         exit(1)
-    a = int(sys.argv[1])
-    b = int(sys.argv[3])
-    operator = sys.argv[2]
+    a = int(argv[1])
+    b = int(argv[3])
+    operator = argv[2]
     if operator is '+':
         print('{} + {} = {}'.format(a, b, add(a, b)))
     elif operator is '-':
