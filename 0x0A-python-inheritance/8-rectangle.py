@@ -7,7 +7,6 @@ class Rectangle(BaseGeometry):
     """ Module that validates width and height values by inheriting
         from BaseGeometry class """
 
-
     def __init__(self, width, height):
         self.integer_validator('width', width)
         self.integer_validator('height', height)
