@@ -1,0 +1,50 @@
+Tests for MyList class in 1-my_list module
+==========================================
+
+import module:
+       >>> MyList = __import__('1-my_list').MyList
+
+Tests:
+
+Normal test:
+
+   >>> sorting = MyList()
+   >>> sorting.append(1)
+   >>> sorting.append(3)
+   >>> sorting.append(2)
+   >>> print(sorting)
+   [1, 3, 2]
+
+   >>> sorting.print_sorted()
+   [1, 2, 3]
+
+________________________________
+
+Negative test:
+
+   >>> sorting.append(-1)
+   >>> print(sorting)
+   [1, 3, 2, -1]
+
+   >>> sorting.print_sorted()
+   [-1, 1, 2, 3]
+
+________________________________
+
+Empty list:
+
+   >>> sorted = MyList()
+   >>> sorted.print_sorted()
+   []
+
+_______________________________
+
+Wrong call:
+
+   >>> s = MyList(2)
+   Traceback (most recent call last):
+   TypeError: 'int' object is not iterable
+
+   >>> s = MyList(2.2)
+   Traceback (most recent call last):
+   TypeError: 'float' object is not iterable
