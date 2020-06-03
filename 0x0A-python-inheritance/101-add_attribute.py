@@ -3,6 +3,8 @@
 
 
 def add_attribute(instance, name, value):
+    """ function that tries to add atribute """
+
     if hasattr(instance, '__dict__'):
         setattr(instance, name, value)
     else:
