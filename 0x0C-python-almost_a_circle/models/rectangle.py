@@ -41,7 +41,7 @@ class Rectangle(Base):
     def __str__(self):
         """ resignification of __str__ inheritance """
         return ('[Rectangle] (' + str(self.id) + ') ' + str(self.x) + '/' +
-        str(self.y) + ' - ' + str(self.width) + '/' + str(self.height))
+                str(self.y) + ' - ' + str(self.width) + '/' + str(self.height))
 
     @property
     def width(self):
