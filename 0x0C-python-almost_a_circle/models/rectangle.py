@@ -1,7 +1,8 @@
 #!/usr/bin/python3
 """ Module that hosts the Rectangle class """
-
 from models.base import Base
+
+
 
 class Rectangle(Base):
     """ Class Rectangle which inherits from base """
@@ -12,8 +13,6 @@ class Rectangle(Base):
         self.height = height
         self.x = x
         self.y = y
-
-    """ Method that describes area """
 
     def area(self):
         return self.width * self.height
