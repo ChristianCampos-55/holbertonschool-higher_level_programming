@@ -20,7 +20,13 @@ class Rectangle(Base):
 
     def display(self):
         """ public method display, prints rect with '#' """
+        if self.__y:
+            for i in range(self.__y):
+                print()
         for a in range(self.__height):
+            if self.__x:
+                for j in range(self.__x):
+                    print(' ', end='')
             for b in range(self.__width):
                 print('#', end='')
             print()
