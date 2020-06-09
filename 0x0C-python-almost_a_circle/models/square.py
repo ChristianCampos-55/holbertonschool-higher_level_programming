@@ -14,7 +14,7 @@ class Square(Rectangle):
         """ update public method to use args and kwargs """
         selves = ['id', 'size', 'x', 'y']
         if args is not None and len(args) is not 0:
-            for a in len(args):
+            for a in range(len(args)):
                 setattr(self, selves[a], args[a])
         else:
             for key, value in kwargs.items():
