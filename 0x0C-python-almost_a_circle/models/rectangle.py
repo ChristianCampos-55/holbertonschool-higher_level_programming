@@ -25,6 +25,10 @@ class Rectangle(Base):
                 print('#', end='')
             print()
 
+    def __str__(self):
+        return ('[Rectangle] (' + str(self.id) + ') ' + str(self.__x) + '/' +
+        str(self.__y) + ' - ' + str(self.__width) + '/' + str(self.__height))
+
     @property
     def width(self):
         """ getter width """
