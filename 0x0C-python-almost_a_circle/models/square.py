@@ -11,4 +11,4 @@ class Square(Rectangle):
     def __str__(self):
         """ re-resignification of string method """
         return ('[Square] (' + str(self.id) + ') ' + str(self.x) + '/' +
-                str(self.y) + ' - ' + str(self.size))
+                str(self.y) + ' - ' + str(self.width))
