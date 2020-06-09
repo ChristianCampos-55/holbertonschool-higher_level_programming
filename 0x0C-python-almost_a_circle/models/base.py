@@ -1,9 +1,9 @@
 #!/usr/bin/python3
-""" Module that hosts the class Base """
+''' Module that hosts the class Base '''
 
 
 class Base:
-    """ Simple Base class """
+    ''' Simple Base class '''
 
     __nb_objects = 0
 
