@@ -1,7 +1,6 @@
 #!/usr/bin/python3
 """ Module that hosts all tests for the Rectangle Class """
 import unittest
-from models import rectangle
 from models.rectangle import Rectangle
 
 
