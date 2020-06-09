@@ -1,11 +1,9 @@
 #!/usr/bin/python3
-""" Module tht hosts all tests for the Rectangle Class """
-
-
+""" Module that hosts all tests for the Rectangle Class """
 import unittest
-
 from models import rectangle
 from models.rectangle import Rectangle
+
 
 class TestRectangle(unittest.TestCase):
     """ Unit tests for rectangle """
