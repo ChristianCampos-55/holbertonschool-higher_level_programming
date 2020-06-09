@@ -37,6 +37,9 @@ class Rectangle(Base):
         if args is not None and len(args) != 0:
             for a in range(0, len(args)):
                 setattr(self, selves[a], args[a])
+        else:
+            for key, value in kwargs.items():
+                setattr(self, key, value)
 
     def __str__(self):
         """ resignification of __str__ inheritance """
