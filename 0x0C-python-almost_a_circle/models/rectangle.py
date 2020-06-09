@@ -31,7 +31,15 @@ class Rectangle(Base):
                 print('#', end='')
             print()
 
+    def update(self, *args):
+        """ class to update values with args """
+        selves = ['id', 'width', 'height', 'x', 'y']
+        if args is not None and len(args) is not 0:
+            for a in range(len(args)):
+                setattr(self, selves[a], args[a])
+
     def __str__(self):
+        """ resignification og __str__ inheritance """
         return ('[Rectangle] (' + str(self.id) + ') ' + str(self.__x) + '/' +
         str(self.__y) + ' - ' + str(self.__width) + '/' + str(self.__height))
 
