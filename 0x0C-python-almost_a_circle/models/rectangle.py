@@ -18,6 +18,13 @@ class Rectangle(Base):
         """ public method area, returns just that """
         return self.__width * self.__height
 
+    def display(self):
+        """ public method display, prints rect with '#' """
+        for a in range(self.__height):
+            for b in range(self.__width):
+                print('#', end='')
+            print()
+
     @property
     def width(self):
         """ getter width """
