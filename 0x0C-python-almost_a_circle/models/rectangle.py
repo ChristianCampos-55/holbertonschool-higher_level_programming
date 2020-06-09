@@ -32,9 +32,9 @@ class Rectangle(Base):
             print()
 
     def update(self, *args):
-        """ class to update values with args """
+        """ method to update values with args """
         selves = ['id', 'width', 'height', 'x', 'y']
-        if args is not None and len(args) is not 0:
+        if args is not None and len(args) != 0:
             for a in range(0, len(args)):
                 setattr(self, selves[a], args[a])
 
