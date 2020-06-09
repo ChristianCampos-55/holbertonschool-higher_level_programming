@@ -1,7 +1,6 @@
 #!/usr/bin/python3
 """ Module that hosts the class Base """
 
-import json
 
 class Base:
     """ Simple Base class """
