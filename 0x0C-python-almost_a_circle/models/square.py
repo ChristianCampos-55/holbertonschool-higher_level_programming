@@ -10,6 +10,16 @@ class Square(Rectangle):
         """ class constructor """
         super().__init__(size, size, x, y, id)
 
+    def update(self, *args, **kwargs):
+        """ update public method to use args and kwargs """
+        selves = ['id', 'size', 'x', 'y']
+        if args is not None and len(args) is not 0:
+            for a in len(args):
+                setattr(self, selves[a], args[a])
+        else:
+            for key, value in kwargs.items():
+                setattr(self, key, value)
+
     @property
     def size(self):
         """ getter for size with Rectangle's width """
