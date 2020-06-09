@@ -39,9 +39,9 @@ class Rectangle(Base):
                 setattr(self, selves[a], args[a])
 
     def __str__(self):
-        """ resignification og __str__ inheritance """
-        return ('[Rectangle] (' + str(self.id) + ') ' + str(self.__x) + '/' +
-        str(self.__y) + ' - ' + str(self.__width) + '/' + str(self.__height))
+        """ resignification of __str__ inheritance """
+        return ('[Rectangle] (' + str(self.id) + ') ' + str(self.x) + '/' +
+        str(self.y) + ' - ' + str(self.width) + '/' + str(self.height))
 
     @property
     def width(self):
