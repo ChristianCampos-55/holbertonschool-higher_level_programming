@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 """ Module that hosts the class Base """
+import json
 
 
 class Base:
@@ -16,6 +17,7 @@ class Base:
             self.id = Base.__nb_objects
 
     @staticmethod
+    """ static method that Returns Json representation """
     def to_json_string(list_dictionaries):
         if list_dictionaries is None or list_dictionaries is []:
             return '[]'
@@ -23,6 +25,7 @@ class Base:
             return json.dumps(list_dictionaries)
 
     @classmethod
+    """ class method that writes a Json string representation to a file """
     def save_to_file(cls, list_objs):
         if list_objs is None:
             return json.loads(list_objs)
