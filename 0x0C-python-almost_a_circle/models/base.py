@@ -17,15 +17,15 @@ class Base:
             self.id = Base.__nb_objects
 
     @staticmethod
-    """ static method that Returns Json representation """
     def to_json_string(list_dictionaries):
+        """ static method that Returns Json representation """
         if list_dictionaries is None or list_dictionaries is []:
             return '[]'
         else:
             return json.dumps(list_dictionaries)
 
     @classmethod
-    """ class method that writes a Json string representation to a file """
     def save_to_file(cls, list_objs):
+        """ class method that writes a Json string representation to a file """
         if list_objs is None:
             return json.loads(list_objs)
