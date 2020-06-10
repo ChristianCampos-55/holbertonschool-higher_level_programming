@@ -31,6 +31,11 @@ class Rectangle(Base):
                 print('#', end='')
             print()
 
+    def to_dictionary(self):
+        """ public method that returns a dict representation of the class """
+        return {'id': self.id, 'width': self.width, 'height': self.height,
+                'x': self.x, 'y':self.y}
+
     def update(self, *args, **kwargs):
         """ method to update values with args """
         selves = ['id', 'width', 'height', 'x', 'y']
