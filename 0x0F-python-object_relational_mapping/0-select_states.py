@@ -3,11 +3,10 @@
 if __name__ == '__main__':
     import sys
     import MySQLdb
-
     db = MySQLdb.connect(user=sys.argv[1], pass=sys.argv[2],
                                db=sys.argv[3], port=3306, host='localhost()')
     cursor = db.cursor()
-    cursor.execute('SELECT * FROM states ORDER BY states.id ASC;')
+    cursor.execute('SELECT * FROM states ORDER BY id ASC;')
     states = cursor.fetchall()
     for st in states:
         print(st)
