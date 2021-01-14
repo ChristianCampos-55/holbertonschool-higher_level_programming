@@ -11,7 +11,7 @@ if __name__ == '__main__':
         user = sys.argv[1]
     try:
         js_on = req.json()
-        if not js_on:
+        if js_on == {}:
             print('No result')
         else:
             print('[{}] {}'.format(result.get('id'), result.get(name)))
