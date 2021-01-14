@@ -4,10 +4,11 @@ import requests
 import sys
 
 if __name__ == '__main__':
-    data = {'q': ''}
-    url = 'http://0.0.0.0:5000/search_user'
+    url = 'http://0.0.0.0:5000/search_user'    
     if len(sys.argv) > 1:
         data = {'q': sys.argv[1]}
+    else:
+        data = {'q': ''}
     requested = requests.post(url, data)
     try:
         js_on = requested.json()
