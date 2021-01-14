@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Takes in a URL and Email, sends req to URL with mail as param, shows response"""
+"""Takes URL & Email, sends req to URL with mail as param, shows response"""
 import sys
 import requests
 
