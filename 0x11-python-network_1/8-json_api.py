@@ -6,9 +6,9 @@ import sys
 if __name__ == '__main__':
     data = {'q': ''}
     url = 'http://0.0.0.0:5000/search_user'
-    requested = requests.post(url, data)
     if len(sys.argv) > 1:
         data = {'q': sys.argv[1]}
+    requested = requests.post(url, data)
     try:
         js_on = requested.json()
         if not js_on:
