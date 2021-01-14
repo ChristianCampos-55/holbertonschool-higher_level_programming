@@ -8,7 +8,7 @@ if __name__ == '__main__':
     url = 'http://0.0.0.0:5000/search_user'
     requested = requests.post(url, data)
     if len(sys.argv) > 1:
-        user = sys.argv[1]
+        data = {'q': sys.argv[1]}
     try:
         js_on = requested.json()
         if not js_on:
