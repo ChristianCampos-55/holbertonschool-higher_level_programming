@@ -14,6 +14,6 @@ if __name__ == '__main__':
         if not js_on:
             print('No result')
         else:
-            print('[{}] {}'.format(result.get('id'), result.get(name)))
+            print('[{}] {}'.format(result.get('id'), result.get('name')))
     except:
         print('Not a valid JSON')
