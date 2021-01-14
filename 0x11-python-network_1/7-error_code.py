@@ -8,4 +8,4 @@ if __name__ == '__main__':
     if to_print.status_code >= 400:
         print('Error code:', to_print.status_code)
     else:
-        print(toprint.text)
+        print(to_print.text)
