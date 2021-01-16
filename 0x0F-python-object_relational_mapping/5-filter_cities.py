@@ -16,7 +16,7 @@ if __name__ == '__main__':
     for i in queried:
         if countula is not 0:
             print(', ', end='')
-        print('%s' % city, end='')
+        print('%s' % i, end='')
         countula = countula + 1
     print('')
     cursor.close()
