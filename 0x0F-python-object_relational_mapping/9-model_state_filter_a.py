@@ -12,5 +12,5 @@ if __name__ == '__main__':
     sess = Sess()
     for i in sess.query(State).order_by(State.id).all():
         if 'a' in i.name:
-            print('{}: {}'.format(state.id, state.name))
+            print('{}: {}'.format(i.id, i.name))
     sess.close()
