@@ -13,6 +13,6 @@ if __name__ == '__main__':
     sess = Sess()
     new_state = State(name='California')
     to_get = session.query(City).order_by(City.id).all()
-    for i in to_get:
-        print('{}: {} -> {}'.format(i.id, i.name, i.state.name))
+    for city in to_get:
+        print('{}: {} -> {}'.format(city.id, city.name, city.state.name))
     sess.close()
