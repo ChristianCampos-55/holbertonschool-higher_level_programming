@@ -10,7 +10,7 @@ if __name__ == '__main__':
         'mysql+mysqldb://{}:{}@localhost/{}'.format(argv[1], argv[2], argv[3]))
     Sess = sessionmaker(bind=ngine)
     sess = Sess()
-    second = sess.query(State).filter(State.id == 2)
+    second = sess.query(State).filter_by(id = 2)
     second.name = 'New Mexico'
     sess.commit()
     sess.close()
